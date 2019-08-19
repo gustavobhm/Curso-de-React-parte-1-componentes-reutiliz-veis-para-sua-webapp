@@ -66,7 +66,8 @@ class FormularioLivro extends Component {
                     <InputCustomizado id="titulo" name="titulo" label="Titulo: " type="text" value={this.state.titulo} placeholder="Titulo do livro" onChange={this.setTitulo} />
                     <InputCustomizado id="preco" name="preco" label="Preco: " type="decimal" value={this.state.preco} placeholder="Preço do livro" onChange={this.setPreco} />
                     <div className="pure-controls">
-                        <select value={this.state.autorId} name="autorId" onChange={this.setAutorId}>
+                        <label htmlFor="autorId">Autor</label>
+                        <select style={{maxWidth: '300px'}} value={this.state.autorId} name="autorId" onChange={this.setAutorId}>
                             <option value="">Selecione</option>
                             {autores}
                         </select>
